@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // Para fechar o app de forma saudável
 import 'package:intl/intl.dart';
@@ -234,12 +235,22 @@ Future<void> _showLogoutConfirmationDialog() async {
 }
 
 Future<void> _logout() async {
-  // ... código para realizar o logout e limpar dados
+  try {
+    // Realizar o logout no Firebase Authentication
+    await FirebaseAuth.instance.signOut();
 
-  Navigator.pushAndRemoveUntil(
-    context,
-    MaterialPageRoute(builder: (context) => LoginPage()),
-    (route) => false,
-  );
+    // Redirecionar para a página de login e limpar o histórico de navegação
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => LoginPage()),
+      (route) => false,
+    );
+  } catch (e) {
+    // Caso ocorra um erro, exibir uma mensagem
+    print('Erro ao realizar logout: $e');
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Erro ao realizar logout. Tente novamente.')),
+    );
+  }
 }
 }
