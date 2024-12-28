@@ -9,7 +9,10 @@
   <li>Valores recebidos por obra.</li>
 </ul>
 <p>
-  O sistema foi pensado para integrar dados de diferentes plataformas, com suporte multiplataforma para Android, iOS, Web e Desktop.
+  O sistema foi pensado para integrar dados de diferentes plataformas, com suporte multiplataforma para Android, iOS, Web e Desktop.</p>
+
+<p>
+  Este projeto interage diretamente com o aplicativo Java <a href="https://github.com/CustomClothesTcc/Aplicativo-Geofence" target="_blank">Aplicativo Geofence</a>, responsável por rastrear a localização geográfica e o início do expediente.
 </p>
 
 ---
@@ -76,6 +79,7 @@ flutter run
   <li><b>MySQL:</b> Banco de dados relacional utilizado para armazenar e gerenciar informações.</li>
   <li><b>SQLite:</b> Para armazenamento local temporário, se necessário.</li>
   <li><b>Firebase:</b> Opcional para sincronização de dados em tempo real.</li>
+  <li><b>Java:</b> Interação com o aplicativo geográfico <a href="https://github.com/CustomClothesTcc/Aplicativo-Geofence" target="_blank">Aplicativo Geofence</a>.</li>
 </ul>
 
 ---
@@ -90,3 +94,4 @@ flutter run
   <li>Script SQL para criação do banco de dados e tabelas.</li>
   <li>Especificações técnicas do sistema.</li>
 </ul>
+
