@@ -90,10 +90,3 @@ flutter run
   <li>Script SQL para criação do banco de dados e tabelas.</li>
   <li>Especificações técnicas do sistema.</li>
 </ul>
-
----
-
-<h2>📬 Contato</h2>
-<p>
-  Se tiver dúvidas, sugestões ou quiser conhecer mais sobre meu trabalho, <a href="https://kaiquevfreitas.github.io/Site_Portifolio/">CLIQUE AQUI</a>.
-</p>
